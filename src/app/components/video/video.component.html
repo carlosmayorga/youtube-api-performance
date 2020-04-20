@@ -1,0 +1,14 @@
+
+<div *ngIf="videoItem" class="card">
+
+  <img class="card-img-top"
+       [src]="videoItem.snippet.thumbnails.standard.url">
+  <div class="card-body">
+    <h6 class="card-title">{{videoItem.snippet.title}}</h6>
+    <p class="card-subtitle mb-2 text-muted">{{videoItem.snippet.description}}</p>
+    <button type="button"
+            (click)="playVideo(videoItem.snippet.resourceId.videoId, videoItem.snippet.title)"
+            class="btn btn-outline-primary">Play video</button>
+  </div>
+
+</div>
